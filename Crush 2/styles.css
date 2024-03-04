@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Para ocultar partes de las imágenes que están fuera de la pantalla */
+}
+
+#container {
+    text-align: center;
+    position: relative; /* Establecer posición relativa para posicionar elementos secundarios */
+}
+
+#forgiveMeGif {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.forgivenImages {
+    position: absolute; /* Posición absoluta para imágenes de fondo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Tamaño completo de la ventana */
+    height: 100%; /* Tamaño completo de la ventana */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Establecer un índice z negativo para que las imágenes estén detrás del contenido */
+    opacity: 0; /* Ocultar las imágenes inicialmente */
+    transition: opacity 0.5s ease; /* Agregar una transición suave */
+}
+
+#options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 10px;
+}
+
+.green {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.red {
+    background-color: #f44336;
+    color: white;
+}
+
+.red:hover {
+    position: relative; /* Cambiar la posición al pasar el mouse sobre el botón rojo */
+    animation: shake 0.5s; /* Aplicar animación cuando se pasa el mouse sobre el botón rojo */
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#forgivenMessage {
+    display: none;
+    text-align: center; /* Centrar el contenido */
+}
+
+#forgiveText {
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
+#forgiveText2 {
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Modificaciones para el mensaje de perdón */
+#forgivenMessage p {
+    font-weight: bold;
+    font-size: 36px;
+    color: rgb(49, 47, 33);
+    background-color: white;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 10px; /* Agregar un espacio entre los párrafos */
+}
+#greenGif {
+    display: none; /* Ocultar el GIF por defecto */
+    max-width: 100%; /* Ajustar el ancho máximo */
+    margin: 20px auto; /* Centrar el GIF y agregar espacio superior e inferior */
+    height: 400px;
+}
+
+/* Estilos adicionales para el fondo blanco */
+#forgivenMessage p {
+    background-color: white;
+    padding: 10px;
+    display: inline-block;
+}
